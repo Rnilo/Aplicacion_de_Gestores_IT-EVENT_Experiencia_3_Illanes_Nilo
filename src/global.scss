@@ -35,3 +35,24 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+ion-tab-bar {
+        ion-tab-button[active] {
+            ion-label {
+                --color: #18b153;
+            }
+        }
+
+        ion-tab-button {
+            ion-label {
+                color: #912c2c;
+        }
+
+        &:hover {
+            ion-label {
+                color: #b95252;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Notificaciones > </ion-card-title>
+      <ion-card-title>Mensajes > </ion-card-title>
+      <ion-card-title>Perfil > </ion-card-title>
+      <ion-card-title>Comentarios > </ion-card-title>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <ion-card-title>Ayuda > </ion-card-title>
+      <ion-card-title>Sobre Nosotros > </ion-card-title>
+    </ion-card-header>
+
+
+
+    <div style="text-align: center;">
+      <ion-button (click)="cerrarSesion()" expand="solid" shape="round" color="medium" href="/logo-inicio"> <!--el login() es el metodo que se debe enlazar al ts sino la pestaña no funcionara-->
+        cerrar sesion
+      </ion-button>
+    </div>
+  </ion-card>
+</ion-content>

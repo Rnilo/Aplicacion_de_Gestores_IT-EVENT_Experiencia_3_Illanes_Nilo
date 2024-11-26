@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Registro de Eventos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registro de Eventos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- BOTÓN PARA AGREGAR EVENTO -->
+  <ion-card color="success">
+    <ion-card-header>
+      <ion-card-title><strong>Crear un Nuevo Evento</strong></ion-card-title><br>
+      <ion-button (click)="crearEvento()">Crear</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- BOTÓN PARA VER LOS EVENTOS -->
+  <ion-card color="tertiary">
+    <ion-card-header>
+      <ion-card-title><strong>Ver Eventos Creados</strong></ion-card-title><br>
+      <ion-button (click)="listarEvento()">Ver</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- BOTÓN PARA IR A LA PÁGINA DE ACTUALIZACIÓN -->
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title><strong>Actualizar Eventos</strong></ion-card-title><br>
+      <ion-button (click)="redirigirActualizar()">Actualizar</ion-button>
+    </ion-card-header>
+  </ion-card>
+  
+
+  <!-- BOTÓN PARA ELIMINAR EVENTOS -->
+  <ion-card color="danger">
+    <ion-card-header>
+      <ion-card-title><strong>Eliminar Eventos</strong></ion-card-title><br>
+      <ion-button (click)="redirigirEliminar()">Eliminar</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <app-explore-container name="Tab 2 page"></app-explore-container>
+</ion-content>

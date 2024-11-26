@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="volver()">Regresar</ion-button>
+    </ion-buttons>
+    <ion-title>Generar QR para Eventos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="eventos.length > 0">
+    <ion-item *ngFor="let evento of eventos">
+      <ion-label>
+        <h2>{{ evento.nombre }}</h2>
+        <p>Fecha: {{ evento.fecha }} - Hora: {{ evento.hora }}</p>
+        <p>{{ evento.descripcion }}</p>
+        <p>Asistentes: {{ evento.cantidadAsistentes }}</p>
+      </ion-label>
+      <!-- Botón "Generar QR" para cada evento -->
+      <ion-button color="tertiary" (click)="generarQr(evento)">Generar QR</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-card *ngIf="eventos.length === 0">
+    <ion-card-header>
+      <ion-card-title>No hay eventos disponibles</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

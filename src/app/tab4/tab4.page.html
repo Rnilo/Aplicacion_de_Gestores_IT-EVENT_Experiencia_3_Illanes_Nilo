@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img alt="Silhouette of mountains" src="assets/qr.webp" />
+    
+  </ion-card>
+
+  <!-- BOTÓN PARA VER LOS EVENTOS -->
+  <ion-card>
+    <ion-card-header>
+      <ion-button (click)="selccionarEvento()">Abrir camara</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+
+</ion-content>

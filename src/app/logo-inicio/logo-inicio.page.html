@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center"></ion-title>
+  </ion-toolbar>
+</ion-header>
+<!---->
+
+<ion-content [fullscreen]="true" class="ion-text-center">
+<!--aqui va la foto de inicio-->
+  <ion-card>
+    <img alt="Silhouette of mountains" src="assets/fondo.jpeg" />
+    <ion-card-header>
+      <ion-card-title>IT-Event</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <!--card en la que van los botones de inicio de sesion y de registro-->
+  <ion-card shape="round">
+    <ion-card-content>
+      <ion-card-subtitle>Bienvenido a IT-Event</ion-card-subtitle>
+      <ion-button (click)="inicioSesion()" expand="block" shape="round" color="primary" href="/comienzo">
+        Acceder
+      </ion-button>
+      <br><br>
+      <ion-card-subtitle>¿No tienes una cuenta?</ion-card-subtitle>
+      <ion-button (click)="registrarse()" expand="block" shape="round" color="warning" href="/crear-usuario">
+        Registrarse
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+

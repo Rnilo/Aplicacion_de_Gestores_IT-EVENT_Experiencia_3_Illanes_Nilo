@@ -1,6 +1,8 @@
 {
   "name": "MyApp",
   "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -21,14 +23,20 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@capacitor/android": "^6.2.0",
     "@capacitor/app": "6.0.2",
+    "@capacitor/camera": "^6.1.1",
     "@capacitor/core": "6.2.0",
     "@capacitor/haptics": "6.0.2",
     "@capacitor/keyboard": "6.0.3",
     "@capacitor/status-bar": "6.0.2",
     "@ionic/angular": "^8.0.0",
+    "angularx-qrcode": "^18.0.2",
+    "g": "^2.0.1",
     "ionicons": "^7.0.0",
+    "json": "^11.0.0",
     "rxjs": "~7.8.0",
+    "server": "^1.0.41",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
@@ -59,6 +67,5 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.0"
-  },
-  "description": "An Ionic project"
+  }
 }

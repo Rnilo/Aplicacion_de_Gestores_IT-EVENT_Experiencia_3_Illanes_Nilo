@@ -1,0 +1,84 @@
+{
+  "eventos": [
+    {
+      "id": "1",
+      "nombre": "Que Sabemos Sobre Ciberseguridad",
+      "fecha": "2024-22-10",
+      "hora": "15:00",
+      "descripcion": "Duoc - Evento sobre Ciberseguridad",
+      "cantidadAsistentes": "159"
+    },
+    {
+      "id": "2",
+      "nombre": "Crisis en la Construccion ¿Vale la pena estudiar en este momento?",
+      "fecha": "2024-23-10",
+      "hora": "19:00",
+      "descripcion": "Duoc - evento sobre construccion",
+      "cantidadAsistentes": "225"
+    },
+    {
+      "id": "3",
+      "nombre": "Mes de la Salud Mental",
+      "fecha": "2024-28-10",
+      "hora": "12:00",
+      "descripcion": "evento sobre salud mental",
+      "cantidadAsistentes": "132"
+    },
+    {
+      "id": "b62b",
+      "nombre": "Festi Game",
+      "fecha": "15/11/2024",
+      "hora": "9:00 am a 21:00 pm ",
+      "descripcion": "Evento de Videojuegos",
+      "cantidadAsistentes": "8.000 personas"
+    },
+    {
+      "id": "5f7f",
+      "nombre": "Comic-con 2024",
+      "fecha": "31-10-2024",
+      "hora": "De 10 am a 19 pm",
+      "descripcion": "Evento de comics, series y peliculas",
+      "cantidadAsistentes": "12.500 personas"
+    },
+    {
+      "id": "5ea2",
+      "nombre": "Navidad",
+      "fecha": "25-21-2024",
+      "hora": "Todo el Dia",
+      "descripcion": "Celebracion de Navidad",
+      "cantidadAsistentes": "15"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "luciano",
+      "email": "usuario1@mail.cl",
+      "password": "duoc1234",
+      "isactive": true
+    },
+    {
+      "id": "2",
+      "username": "ricardo",
+      "email": "usuario2@mail.cl",
+      "password": "maipu1234",
+      "isactive": true
+    },
+    {
+      "id": "72c4",
+      "username": "luciano illanes",
+      "email": "lu.illanes19@outlook.com",
+      "rut": "18.862.963-6",
+      "password": "123456luci",
+      "isactive": true
+    },
+    {
+      "id": "ed13",
+      "username": "nicolas mardones",
+      "email": "nicolas@gmail",
+      "rut": "10.945.345-5",
+      "password": "nico123586",
+      "isactive": true
+    }
+  ]
+}

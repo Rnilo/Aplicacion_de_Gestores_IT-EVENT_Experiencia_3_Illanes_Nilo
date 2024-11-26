@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  
+
+
+  <ion-card>
+    <ion-card-header>
+      <!-- Mostrar el nombre de usuario almacenado en 'username' -->
+      <ion-card-title>Bienvenido {{ username }} a IT-EVENT</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <img alt="it-event-logo" src="assets/OIG3.jpeg" />  
+    <ion-card-content>
+      "IT-Event es la mejor aplicación de gestión de eventos del mundo."
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Noticias</ion-card-title><br>
+      <img alt="it-event-logo" src="assets/fotos/Captura.PNG" />
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <img alt="it-event-logo" src="assets/fotos/Captura2.PNG" />
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      <img alt="it-event-logo" src="assets/fotos/Captura3.PNG" />
+    </ion-card-header>
+  </ion-card>
+
+
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content>

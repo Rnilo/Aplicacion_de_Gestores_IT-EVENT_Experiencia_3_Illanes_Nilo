@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Actualizar Evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-item>
+      <ion-label position="floating">Nombre del Evento</ion-label>
+      <ion-input [(ngModel)]="evento.nombre" name="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha del Evento</ion-label>
+      <ion-input [(ngModel)]="evento.fecha" name="fecha"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Hora del Evento</ion-label>
+      <ion-input [(ngModel)]="evento.hora" name="hora"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Lugar y Descripción del Evento</ion-label>
+      <ion-input [(ngModel)]="evento.descripcion" name="descripcion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cantidad de Asistentes</ion-label>
+      <ion-input [(ngModel)]="evento.cantidadAsistentes" name="cantidadAsistentes"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="actualizarEvento()">Guardar Cambios</ion-button>
+  </form>
+</ion-content>

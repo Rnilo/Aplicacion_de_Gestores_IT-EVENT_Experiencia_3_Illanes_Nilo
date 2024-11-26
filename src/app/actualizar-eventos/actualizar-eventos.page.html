@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- Botón de "Volver" en la esquina superior izquierda -->
+    <ion-buttons slot="start">
+      <!-- El botón llama a la función 'volver()' cuando es presionado -->
+      <ion-button (click)="volver()">
+        <!-- Icono de flecha hacia atrás -->
+        <ion-icon name="arrow-back"></ion-icon>
+        Volver  <!-- Texto del botón -->
+      </ion-button>
+    </ion-buttons>
+    <!-- Título de la página -->
+    <ion-title>Actualizar Eventos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Lista de eventos si existen (si el arreglo 'eventos' tiene más de 0 elementos) -->
+  <ion-list *ngIf="eventos.length > 0">
+    <!-- Recorre cada evento en el arreglo 'eventos' -->
+    <ion-item *ngFor="let evento of eventos">
+      <!-- Etiqueta que muestra los detalles de cada evento -->
+      <ion-label>
+        <!-- Muestra el nombre del evento -->
+        <h2>{{ evento.nombre }}</h2>
+        <!-- Muestra la fecha y la hora del evento -->
+        <p>Fecha: {{ evento.fecha }} - Hora: {{ evento.hora }}</p>
+        <!-- Muestra la descripción del evento -->
+        <p>{{ evento.descripcion }}</p>
+        <!-- Muestra la cantidad de asistentes al evento -->
+        <p>Asistentes: {{ evento.cantidadAsistentes }}</p>
+      </ion-label>
+      <!-- Botón de Actualizar para cada evento individual -->
+      <ion-button (click)="actualizarEvento(evento)" color="secondary">
+        Actualizar  <!-- Texto del botón -->
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tarjeta que se muestra si no hay eventos disponibles (cuando el arreglo 'eventos' está vacío) -->
+  <ion-card *ngIf="eventos.length === 0">
+    <ion-card-header>
+      <!-- Título que indica que no hay eventos -->
+      <ion-card-title>No hay eventos disponibles</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

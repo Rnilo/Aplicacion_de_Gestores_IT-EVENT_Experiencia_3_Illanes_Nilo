@@ -1,3 +1,26 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- El menú solo se muestra si estamos en una de las pestañas permitidas -->
+  <ion-menu *ngIf="shouldShowMenu()" contentId="main" menuId="first" side="start" type="overlay">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-icon slot="start" name="logo-figma" size="large" style="padding-left: 15px;"></ion-icon>
+        <ion-title>It-Event</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-menu-toggle *ngFor="let i of menu">
+        <ion-item [routerLink]="i.redirecTo" color="dark">
+          <ion-label>{{i.name}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
+
+
+
+
+

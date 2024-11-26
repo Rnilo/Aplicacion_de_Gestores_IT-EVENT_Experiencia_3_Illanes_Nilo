@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Volver
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Ingresar Evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Nombre del Evento"
+        label="Ingrese Nombre: " labelPlacement="floating" name="nombre"
+        [(ngModel)]="Evento.nombre">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Fecha del Evento"
+        label="Ingrese Fecha: " labelPlacement="floating" name="fecha"
+        [(ngModel)]="Evento.fecha">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Hora del Evento"
+        label="Ingrese Hora: " labelPlacement="floating" name="hora"
+        [(ngModel)]="Evento.hora">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Descripcion del Evento"
+        label="Ingrese el lugar y la Descripcion: " labelPlacement="floating" name="descripcion"
+        [(ngModel)]="Evento.descripcion">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Cantidad de Asistentes"
+        label="Ingrese la Cantidad de Asistentes: " labelPlacement="floating" name="asistentes"
+        [(ngModel)]="Evento.cantidadAsistentes">
+      </ion-input>
+    </ion-item>
+
+
+    <div style="text-align: center; margin-top: 30px;">
+      <ion-button (click)="crearEvento()" shape="round" color="success">
+        Crear Evento
+      </ion-button>
+    </div>
+
+    
+    
+  </form>
+
+</ion-content>

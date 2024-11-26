@@ -1,0 +1,82 @@
+<form [formGroup]="registroForm">
+  <!-- Campo Username -->
+  <ion-item>
+    <!-- Campo de entrada para el nombre de usuario con enlace a formControlName 'username' -->
+    <ion-input type="text" placeholder="Ingrese un Nombre de Usuario.." formControlName="username" label="Username" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <!-- Validaciones de errores para el campo Username -->
+  <div id="alerta" *ngIf="registroForm.get('username')?.invalid && (registroForm.get('username')?.dirty || registroForm.get('username')?.touched)">
+    <!-- Mostrar error si el campo username está vacío (es obligatorio) -->
+    <div id="alerta" *ngIf="registroForm.get('username')?.hasError('required')">
+      *Username es obligatorio
+    </div>
+    <!-- Mostrar error si el campo username no tiene la longitud mínima requerida (6 caracteres) -->
+    <div id="alerta" *ngIf="registroForm.get('username')?.hasError('minlength')">
+      *Username debe tener mínimo 6 caracteres
+    </div>
+  </div>
+
+  <!-- Campo Email -->
+  <ion-item>
+    <!-- Campo de entrada para el email con enlace a formControlName 'email' -->
+    <ion-input type="email" formControlName="email" label="Email:" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <!-- Validaciones de errores para el campo Email -->
+  <div id="alerta" *ngIf="registroForm.get('email')?.invalid && (registroForm.get('email')?.dirty || registroForm.get('email')?.touched)">
+    <!-- Mostrar error si el campo email está vacío (es obligatorio) -->
+    <div id="alerta" *ngIf="registroForm.get('email')?.hasError('required')">
+      *Email es obligatorio
+    </div>
+    <!-- Mostrar error si el email ingresado no tiene un formato válido -->
+    <div id="alerta" *ngIf="registroForm.get('email')?.hasError('email')">
+      *Formato no válido
+    </div>
+  </div>
+
+  <!-- Campo Rut -->
+  <ion-item>
+    <!-- Campo de entrada para el RUT con enlace a formControlName 'rut' -->
+    <ion-input type="text" placeholder="Ingrese rut.." formControlName="rut" label="Rut" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <!-- Validaciones de errores para el campo Rut -->
+  <div id="alerta" *ngIf="registroForm.get('rut')?.invalid && (registroForm.get('rut')?.dirty || registroForm.get('rut')?.touched)">
+    <!-- Mostrar error si el campo rut está vacío (es obligatorio) -->
+    <div id="alerta" *ngIf="registroForm.get('rut')?.hasError('required')">
+      *Rut es obligatorio
+    </div>
+    <!-- Mostrar error si el campo rut no tiene la longitud mínima requerida -->
+    <div id="alerta" *ngIf="registroForm.get('rut')?.hasError('minlength')">
+      *Rut debe tener mínimo 6 caracteres
+    </div>
+  </div>
+
+  <!-- Campo Password -->
+  <ion-item>
+    <!-- Campo de entrada para la contraseña con enlace a formControlName 'password' -->
+    <ion-input type="password" formControlName="password" label="Password:" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <!-- Validaciones de errores para el campo Password -->
+  <div id="alerta" *ngIf="registroForm.get('password')?.invalid && (registroForm.get('password')?.dirty || registroForm.get('password')?.touched)">
+    <!-- Mostrar error si el campo password está vacío (es obligatorio) -->
+    <div id="alerta" *ngIf="registroForm.get('password')?.hasError('required')">
+      *Password es obligatorio
+    </div>
+    <!-- Mostrar error si la contraseña no cumple con el patrón (mínimo 8 caracteres, una letra y un número) -->
+    <div id="alerta" *ngIf="registroForm.get('password')?.hasError('pattern')">
+      *Password debe tener mínimo 8 caracteres, una letra y un número
+    </div>
+  </div>
+
+  <!-- Botón Crear Usuario -->
+  <div style="text-align: center; margin-top: 30px;">
+    <!-- Botón que llama a la función 'crearUsuario' y solo se habilita si el formulario es válido -->
+    <ion-button (click)="crearUsuario()" [disabled]="!registroForm.valid" shape="round">
+      Crear Usuario
+    </ion-button>
+  </div>
+
+</form>

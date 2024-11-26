@@ -1,0 +1,46 @@
+ion-button {
+  /* Fondo metálico con un degradado */
+  --background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
+  --background-hover: linear-gradient(135deg, #ffd700 0%, #e4a214 100%);
+  --background-activated: linear-gradient(135deg, #d89a3c 0%, #ffcf5c 100%);
+  --background-focused: linear-gradient(135deg, #ffd700 0%, #88f4be 100%);
+  
+  /* Color del texto */
+  --color: #2e2e2e; /* Gris oscuro elegante para el texto */
+  --color-hover: #ffffff; /* Blanco al hacer hover */
+  
+  /* Bordes redondeados y sombreados */
+  --border-radius: 12px;
+  --border-color: #8c8c8c; /* Color del borde en gris metálico */
+  --border-style: solid;
+  --border-width: 1px;
+  
+  /* Sombras más elegantes */
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  
+  /* Grosor del texto */
+  font-weight: bold;
+  font-size: 16px;
+
+  /* Efecto de transición */
+  transition: all 0.3s ease-in-out;
+  
+  /* Efecto de ripple */
+  --ripple-color: rgba(255, 255, 255, 0.3);
+  
+  /* Padding */
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  
+  /* Animación en hover */
+  &:hover {
+    --background: linear-gradient(135deg, #ffd700 0%, #e4a214 100%);
+    --color: #fff;
+    transform: translateY(-2px); /* Movimiento al hacer hover */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+  
+  &:active {
+    transform: translateY(1px); /* Movimiento al hacer clic */
+  }
+}

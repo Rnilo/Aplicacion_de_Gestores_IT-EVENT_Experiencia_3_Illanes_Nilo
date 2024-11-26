@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Eventos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- BOTÓN PARA VER LOS EVENTOS -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><strong>Ver Eventos Creados</strong></ion-card-title><br>
+      <ion-button (click)="listarEvento()">Ver</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><strong>Eventos esta Semana</strong></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <img alt="pimpinela" src="assets/fotos/P4.jpg" />
+    <ion-card-header>
+      <ion-card-title>Que Sabemos Sobre Ciberseguridad</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <img alt="aurora" src="assets/fotos/burbuja.png" />
+    <ion-card-header>
+      <ion-card-title>Crisis en la Construccion ¿Vale la pena estudiar algo relacionado?</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <img alt="creanfields" src="assets/fotos/mental.jpg" />
+    <ion-card-header>
+      <ion-card-title>Mes de la Salud Mental</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <app-explore-container name="Tab 3 page"></app-explore-container>
+</ion-content>
